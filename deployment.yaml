@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: websay
+  name: websay
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: websay
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: websay
+    spec:
+      containers:
+      - image: bryanl/websay
+        name: websay
+        resources: {}
+status: {}
